@@ -14,12 +14,6 @@ save_load_manager = require("save_load_manager")
 require("widgets")
 
 function love.load()
-    local w, h = love.window.getDesktopDimensions()
-
-    if not (w == 1920) or not (h == 1080) then
-        love.window.setMode(1920, 1080)
-    end
-
     love.graphics.setDefaultFilter("nearest", "nearest")
 
     scene_manager = scene_manager.new()
