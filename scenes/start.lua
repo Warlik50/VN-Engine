@@ -32,12 +32,22 @@
 
 --this is not a comprehensive list of all the script functions, nor is the engine feature complete, so if you need help or something added, feel free to ask Sir_Silver ^^
 
+flare = character("flare", "Flare", {1, 0, 0})
+flare.items = {}
+
+catgirl = character("catgirl", "Cat", {1, 1, 1})
+catgirl.friendship = 0
+
+unknown = character("unknown", "Unknown", {1, 1, 1})
+
 book = {}
 player = character("player", "You", {1, 1, 1})
 
 scene "start"
+    text "hello world"
     text "Whats your book called?"
     request_set_variable (book) "name"
     text "Cool, and what's your name?"
     request_set_variable (player) "name"
     text "Hi there $player.name$. Looking forward to reading $book.name$!"
+    flare "that's dumb"

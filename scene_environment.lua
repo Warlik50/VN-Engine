@@ -161,7 +161,6 @@ local function replace_variables(string, environment)
     local pattern = "%$([^%$]%S+)%$"
 
     return string:gsub(pattern, function(variable)
-        print(variable, "THIS??!?!", type(variable))
         return setfenv(loadstring("return " .. variable), environment)()
     end)
 end

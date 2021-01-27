@@ -117,8 +117,7 @@ function widget:post_init()
     local name_x_offset = 20
     name_x_offset = name_x_offset + 20
     local name_font = assets.fonts[48]
-    name_font = assets.fonts[56]
-    name_font = assets.fonts[64]
+
 
     self.name_label = self:add("label")
     self.name_label:set_font(name_font)

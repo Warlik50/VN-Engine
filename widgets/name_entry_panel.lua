@@ -29,7 +29,6 @@ function widget:post_init()
 
         self.name_text_entry:add_hook("on_enter_pressed", function() self:confirm_name(self.name_text_entry:get_text()) end)
 
-        
         local confirm_button = center_panel:add("button")
         confirm_button:set_text("Confirm")
         confirm_button:add_hook("on_clicked", function() self:confirm_name(self.name_text_entry:get_text()) end)

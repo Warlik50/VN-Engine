@@ -9,6 +9,14 @@ function widget:post_init()
     self:set_background_color(colors.light_blue)
     self:dock("fill")
 
+    local panel = self:add("scroll_panel")
+    panel:set_size(200, 200)
+
+        for i = 1, 10 do
+            local button = panel:add("button")
+            button:dock("top")
+        end
+
         local panel = self:add("panel")
         panel:set_draw_background(false)
         panel:set_draw_outline(false)
@@ -17,6 +25,8 @@ function widget:post_init()
         panel:set_pos(156, 208)
         panel:set_height(love.graphics.getHeight())
         
+
+
         
             local centered_panel = panel:add("centered_button_panel")
             centered_panel:set_draw_background(false)

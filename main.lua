@@ -1,15 +1,15 @@
-assets = require("assets")
-animation = require("libraries.animation")
-bitser = require("libraries.bitser")
-class = require("libraries.class")
-event = require("libraries.event")
-ui = require("libraries.storm_ui")
-util = require("libraries.util")
-timer = require("libraries.timer")
-states = require("libraries.state")
-colors = require("colors")
-scene_manager = require("scene_manager")
-save_load_manager = require("save_load_manager")
+assets              = require("assets")
+animation           = require("libraries.animation")
+bitser              = require("libraries.bitser")
+class               = require("libraries.class")
+event               = require("libraries.event")
+ui                  = require("libraries.storm_ui")
+util                = require("libraries.util")
+timer               = require("libraries.timer")
+states              = require("libraries.state")
+colors              = require("colors")
+scene_manager       = require("scene_manager")
+save_load_manager   = require("save_load_manager")
 
 require("widgets")
 
@@ -36,3 +36,14 @@ end
 function love.quit()
     save_load_manager:save_globals()
 end
+
+--when scaling resolution up or down:
+--squeeze or stretch left and right
+--preserve text size
+--zoom in height so that it takes the full height of the window, and you squeeze or stretch the left and right
+
+--it depends on "what the problem is" but you can alsos cale to the width, and clip off the hieght
+--important things: character art, text, try to preserve 
+--make sure to scale character art up or down based on screen resolution
+
+--for testing change screen resolution to different sizes to see how it affects the game code
