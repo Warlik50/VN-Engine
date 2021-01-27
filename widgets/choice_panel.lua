@@ -49,7 +49,7 @@ function widget:add_choice(text, scene_name)
     local choice_index = self.total_choices
 
     local choice = self:add_centered("lockable_button")
-    choice:set_font(assets.fonts.school[50])
+    choice:set_font(assets.fonts[50])
     choice:set_text(text)
     choice:set_height(80)
     choice:set_outline_radius(choice:get_height() / 2, choice:get_height() / 2)
@@ -59,9 +59,9 @@ function widget:add_choice(text, scene_name)
     choice:set_dropshadow(false)
     choice:set_outline_color(colors.black)
     
-    choice.hovered_font = assets.fonts.school[49]
-    choice.depressed_font = assets.fonts.school[46]
-    choice.dialogue_font = assets.fonts.school[48]
+    choice.hovered_font = assets.fonts[49]
+    choice.depressed_font = assets.fonts[46]
+    choice.dialogue_font = assets.fonts[48]
 
     choice:add_hook("on_clicked", function(this)
         self.scene_manager:select_choice(choice_index)
